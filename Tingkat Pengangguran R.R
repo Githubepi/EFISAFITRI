@@ -1,0 +1,5 @@
+attach(TingkatPenganggurann)
+reg5 <- lm(TingkatPengangguranTerbukaa ~ PersentasePendudukMiskinn)
+summary(reg5)
+TingkatPenganggurann$PersentasePendudukMiskinn<-resid(reg5)
+plot(TingkatPenganggurann$TingkatPengangguranTerbukaa,TingkatPenganggurann$PersentasePendudukMiskinn, xlab="Persentase Penduduk Miskin",ylab = "error")
